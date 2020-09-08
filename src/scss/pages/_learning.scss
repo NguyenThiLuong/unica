@@ -1,5 +1,22 @@
+.ct-learning-course {
+    .col-md-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 255px;
+        flex: 0 0 255px;
+        max-width: 255px;
+    }
+
+    .col-md-9 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100% - 255px);
+        flex: 0 0 calc(100% - 255px);
+        max-width: calc(100% - 255px);
+    }
+}
+
 .show_lecture_course {
     height: calc(100vh - 40px) !important;
+    width: 240px;
     background-color: #f0f1f4;
     border-radius: 8px;
     position: fixed !important;
@@ -148,6 +165,7 @@
                 width: 100%;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
 
                 .icon {
                     width: 20px;
@@ -273,7 +291,7 @@
 
     #edm_player_zone {
         width: 100%;
-        height: 400px;
+        height: 500px;
     }
 
     .bot_video_course {
@@ -309,7 +327,7 @@
         border-bottom: 1px solid #ecedf1;
         padding: 8px 10px;
 
-        span {
+        a {
             cursor: pointer;
             margin-right: 22px;
             font-family: Montserrat;
@@ -383,7 +401,6 @@
 
     .tab_info_course {
         margin: 24px 0 0 0;
-        display: none;
 
         .txt_title {
             font-size: 12px;
@@ -393,6 +410,62 @@
     }
 
     .tab_rating {
-        display: none;
+        .box-star {
+            display: table;
+            margin: 0 auto 16px;
+            cursor: pointer;
+        }
+
+        .text-rating {
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.71;
+            letter-spacing: 0.1px;
+            text-align: center;
+            color: #232731;
+        }
+
+        .comment-review {
+            margin-top: 24px;
+        }
+
+        button#btn-review {
+            width: 170px;
+            height: 46px;
+            background: #df322f;
+            color: #fff;
+            border: #df322f;
+            line-height: 1;
+            padding: 14px 50px;
+            font-size: 14px;
+            transition: all ease 0.3s;
+            margin-top: 16px;
+        }
+
+        textarea {
+            border: none;
+            margin: auto;
+            width: 352px;
+            height: 80px;
+            border-radius: 6px;
+            background-color: #ededed;
+            padding: 8px 16px;
+            font-family: Open Sans, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.71;
+            letter-spacing: 0.3px;
+            color: #464d5d;
+            resize: none;
+        }
+    }
+
+    .tab_comment {
     }
 }
