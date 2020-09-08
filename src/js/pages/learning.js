@@ -28,27 +28,3 @@ $(document).ready(function () {
         $('#edm_player_zone').html('<iframe width="90%" height="100%" src="' + link + video_id + '?autoplay=1" autoplay = "1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
     });
 });
-var objHome = {
-    Events: function () {
-        $(".popupSuccessBox .header .close").click(function () { objHome.closeVideo(); });
-        $('.video_play_ic').click(function () {
-            var link = $(this).attr('data-src');
-            objHome.openVideo(link);
-        });
-    },
-    openVideo: function (href) {
-        Common.showProcessing();
-        $(".popupSuccessBox .body").html("");
-        objHome.calcContent(href);
-        $(".popupSuccessFixed").removeClass("hidden");
-        Common.hideProcessing();
-    },
-    closeVideo: function () {
-        $(".popupSuccessBox .body").html("");
-        $(".popupSuccessFixed").addClass("hidden");
-    },
-    calcContent: function (href) {
-        var src = href;
-        $(".popupSuccessBox .body").html('<iframe src="' + src + '?autoplay=1" autoplay = "1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-    }
-};
